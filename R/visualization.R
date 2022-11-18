@@ -600,7 +600,9 @@ netVisual_aggregate <- function(object, signaling, signaling.name = NULL, color.
                                         lab.cex = vertex.label.cex,small.gap = small.gap, big.gap = big.gap,
                                         scale = scale, reduce = reduce, show.legend = show.legend, legend.pos.x = legend.pos.x, legend.pos.y= legend.pos.y)
     
+    gg 
     graphics::mtext(paste0(signaling.name, " signaling pathway network"), side = 3, outer = TRUE, cex = 1, line = -title.space)
+    gg <- recordPlot()
     
   }
 
