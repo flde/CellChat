@@ -598,8 +598,10 @@ netVisual_aggregate <- function(object, signaling, signaling.name = NULL, color.
     gg <- netVisual_chord_cell_internal(prob.sum, color.use = color.use, sources.use = sources.use, targets.use = targets.use, remove.isolate = remove.isolate,
                                         group = group, cell.order = cell.order,
                                         lab.cex = vertex.label.cex,small.gap = small.gap, big.gap = big.gap,
-                                        scale = scale, reduce = reduce,
-                                        title.name = paste0(signaling.name, " signaling pathway network"), show.legend = show.legend, legend.pos.x = legend.pos.x, legend.pos.y= legend.pos.y)
+                                        scale = scale, reduce = reduce, show.legend = show.legend, legend.pos.x = legend.pos.x, legend.pos.y= legend.pos.y)
+    
+    graphics::mtext(paste0(signaling.name, " signaling pathway network"), side = 3, outer = TRUE, cex = 1, line = -title.space)
+    
   }
 
   return(gg)
